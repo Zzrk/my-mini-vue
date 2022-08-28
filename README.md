@@ -21,3 +21,4 @@
 8. ShapeFlags 位运算 & |
 9. component.emit = emit.bind(null, component)
 10. 作用域插槽
+11. currentInstance = instance; 用函数包裹起来，方便调试
