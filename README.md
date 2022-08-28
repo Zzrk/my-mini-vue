@@ -6,6 +6,10 @@
 4. 优化
 
 
+## TPP
+先去写一个特定的行为 -> 重构成通用的行为
+
+
 ## tips
 1. 将一些语义化不是很好的函数抽离出来，如 createActiveObject、extend 等
 2. 注意一致性，对 get、set 同时进行封装
@@ -15,3 +19,5 @@
 6. Object.is()
 7. 5..toString('2) -> '101'
 8. ShapeFlags 位运算 & |
+9. component.emit = emit.bind(null, component)
+10. 作用域插槽
