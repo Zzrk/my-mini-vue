@@ -98,9 +98,10 @@ export function createRenderer(options) {
   }
 
   function patchKeyedChildren(c1, c2, container, parentComponent, parentAnchor) {
+    const l1 = c1.length;
     const l2 = c2.length;
     let i = 0;
-    let e1 = c1.length - 1;
+    let e1 = l1 - 1;
     let e2 = l2 - 1;
 
     function isSomeVNodeType(n1, n2) {
@@ -134,8 +135,8 @@ export function createRenderer(options) {
       e2--;
     }
 
-    // 新的比老的多 创建
     if (i > e1) {
+    // 新的比老的多 创建
       if (i <= e2) {
         const nextPos = e2 + 1;
         const anchor = e2 + 1 < l2 ? c2[nextPos].el : null;
@@ -145,6 +146,7 @@ export function createRenderer(options) {
         }
       }
     } else if (i > e2) {
+    // 老的比新的多 删除
       while(i <= e1) {
         hostRemove(c1[i].el);
         i++;

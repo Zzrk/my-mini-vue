@@ -22,3 +22,6 @@
 9. component.emit = emit.bind(null, component)
 10. 作用域插槽
 11. currentInstance = instance; 用函数包裹起来，方便调试
+12. parentComponent 为父组件实例，根组件为 null
+13. container 为容器 Dom，根组件的容器为 #app 的 div，其 children 的容器为父元素
+14. vnode 的 el 为根元素的 Dom

@@ -22,10 +22,6 @@ class ComputedRefImpl {
     }
     return this._value;
   }
-
-  set value(newValue) {
-
-  }
 }
 
 export function computed(getter) {
