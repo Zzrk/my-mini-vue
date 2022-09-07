@@ -28,3 +28,5 @@ export const capitalize = (str: string) => {
 export const toHandlerKey = (str: string) => {
   return str ? 'on' + capitalize(str) : '';
 }
+
+export * from './toDisplayString';
